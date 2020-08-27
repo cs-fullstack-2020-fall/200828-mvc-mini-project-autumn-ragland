@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = ViewData["PageHeader"];
+}
+@* reference model for object passed from controller *@
+@model BlogSite.ViewModels.UserList
+
+@* Page Header *@
+<h1>@ViewData["PageHeader"]</h1>
+
+@* Page Content *@
+@* iterate through list of users from object passed from controller *@
+@foreach (User user in @Model.mockUsers)
+{
+    @* render user details for each user with partial *@
+    <partial name = "_User" model = "user"/>
+    <br/>
+}

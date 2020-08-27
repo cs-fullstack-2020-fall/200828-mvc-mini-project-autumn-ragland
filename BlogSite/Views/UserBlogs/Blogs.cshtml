@@ -1,0 +1,7 @@
+@model BlogSite.Models.User
+<h1>Blog Details</h1>
+@foreach (Blog blog in @Model.blogs)
+{
+    <partial name = "_Blog" model = "blog"/>
+    <br/>
+}

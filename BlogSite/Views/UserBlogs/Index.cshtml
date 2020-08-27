@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Landing";
+}
+<div class="jumbotron">
+    <h1 class="display-4">User Blogs</h1>
+    <p class="lead">Wlecome to the User Blog Site. Make your thoughts known!</p>
+    <hr class="my-4">
+    <p class="lead">
+        <button type="button" class="btn btn-dark">
+            <a class="text-light" asp-area="" asp-controller="UserBlogs" asp-action="AllUsers">All Users</a>
+        </button>
+        <button type="button" class="btn btn-dark">
+            <a class="text-light" asp-area="" asp-controller="UserBlogs" asp-action="HighlightedUsers">Highlighted Users</a>
+        </button>
+    </p>
+</div>

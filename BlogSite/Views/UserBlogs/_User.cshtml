@@ -1,0 +1,44 @@
+@if(@Model.highlighted)
+{
+<div class="card text-white bg-info mb-3" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">
+            <h3>@Model.fName @Model.LName</h3>
+        </h5>
+        <h6 class="card-subtitle mb-2 text-muted">
+            <h4>Username : @Model.userName</h4>
+            <h4>ID : @Model.userID</h4>
+        </h6>
+        <p class="card-text"><p>@Model.bio</p>
+        @if(@Model.blogs.Count != 0)
+        {
+          <p class="card-text"># of Blogs : @Model.blogs.Count</p>
+            <button type="button" class="btn btn-dark">
+                <a class="text-light" asp-area="" asp-controller="UserBlogs" asp-action="Blogs" asp-route-userID="@Model.userID">View Blogs</a>
+            </button>  
+        }
+    </div>
+</div>
+} else 
+{
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">
+            <h3>@Model.fName @Model.LName</h3>
+        </h5>
+        <h6 class="card-subtitle mb-2 text-muted">
+            <h4>Username : @Model.userName</h4>
+            <h4>ID : @Model.userID</h4>
+        </h6>
+        <p class="card-text"><p>@Model.bio</p>
+        @if(@Model.blogs.Count != 0)
+        {
+          <p class="card-text"># of Blogs : @Model.blogs.Count</p>
+            <button type="button" class="btn btn-dark">
+                <a class="text-light" asp-area="" asp-controller="UserBlogs" asp-action="Blogs" asp-route-userID="@Model.userID">View Blogs</a>
+            </button>  
+        }
+    </div>
+</div>
+}
+
