@@ -1,7 +1,14 @@
+@* reference model for object passed from controller *@
 @model BlogSite.Models.User
+
+@* Page Header *@
 <h1>Blog Details</h1>
+
+@* Page Content *@
+@* iterate through list of blogs from object passed from controller *@
 @foreach (Blog blog in @Model.blogs)
 {
+    @* render blog details for each blog with partial *@
     <partial name = "_Blog" model = "blog"/>
     <br/>
 }
