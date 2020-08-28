@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "7e10486b-4d6c-4e50-b3be-a888d702644d",
+		"name": "200828-User-Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "fName",
+							"value": "User",
+							"type": "text"
+						},
+						{
+							"key": "lName",
+							"value": "Four",
+							"type": "text"
+						},
+						{
+							"key": "userName",
+							"value": "user4",
+							"type": "text"
+						},
+						{
+							"key": "bio",
+							"value": "This is user 4!",
+							"type": "text"
+						},
+						{
+							"key": "highlighted",
+							"value": "true",
+							"type": "text"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/UserBlogs/AddUser",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"UserBlogs",
+						"AddUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/UserBlogs/AllUsers",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"UserBlogs",
+						"AllUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Highlighted",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/UserBlogs/HighlightedUsers",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"UserBlogs",
+						"HighlightedUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Blogs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/UserBlogs/Blogs?userID=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"UserBlogs",
+						"Blogs"
+					],
+					"query": [
+						{
+							"key": "userID",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
